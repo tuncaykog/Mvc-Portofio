@@ -1,0 +1,300 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let title = document.title;
+        let i = 0;
+        let flashingText = "Tuncay KÖG Junior Yazılım Geliştirici";
+
+        setInterval(function () {
+            document.title = i % 2 === 0 ? flashingText : "";
+            i++;
+        }, 1000);
+    </script>
+    <title>Tuncay KÖG - Junior Yazılım Geliştirici</title>
+    <meta name="title" content="Tuncay KÖG - Junior Yazılım Geliştirici">
+    <link rel="shortcut icon" href="" type="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="preload" as="image" href="~/assets/images/hero-banner.jpg">
+
+</head>
+
+<body>
+
+    <div class="preloader" data-preloader>
+        <div class="circle"></div>
+    </div>
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <a href="#" class="logo">
+                <!-- Optional: Add your logo image or text here -->
+                <!-- <img src="path-to-your-logo.png" alt="Logo"> -->
+            </a>
+
+            <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Menüyü Aç/Kapat">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="#home" class="navbar-link">Ana Sayfa</a></li>
+                    <li><a href="#services" class="navbar-link">Hizmetler</a></li>
+                    <li><a href="#skills" class="navbar-link">Portföy</a></li>
+                    <li><a href="#contact" class="navbar-link">İletişim</a></li>
+                </ul>
+            </nav>
+
+            <div class="overlay" data-nav-toggler data-overlay></div>
+
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <!-- Hero Section -->
+            <section class="section hero" aria-label="home" id="home">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="h1 hero-title">Tuncay KÖG</h1>
+                        <p class="hero-subtitle">Junior Yazılım Geliştirici</p>
+                        <div class="hero-banner">
+                            <img src="~/assets/images/tuncay-kog.jpg" alt="Tuncay KÖG">
+                        </div>
+                        <p class="section-text">
+                            Merhaba, ben Tuncay KÖG. İstanbul'da yaşayan bir Junior Yazılım Geliştiriciyim.
+                            Eryaz Bilgi Teknolojileri A.Ş.'de proje destek uzmanı olarak çalışıyorum.
+                            C#, ASP.NET, WinForms ve SQL Server gibi teknolojilerde deneyimliyim.
+                            Hedefim, kullanıcı odaklı ve sürdürülebilir çözümler üretmek.
+                        </p>
+                        <a href="~/assets/cv/tuncay-kog-cv.pdf" class="btn has-before" target="_blank" id="about">
+                            <span class="span">CV'yi İndir</span>
+                            <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="service" aria-labelledby="service-label" id="services">
+                <div class="container">
+                    <div class="title-wrapper">
+                        <div>
+                            <p class="section-subtitle">Verdiğim Hizmetler</p>
+                            <h2 class="h2 section-title" id="service-label">Hizmetler</h2>
+                        </div>
+                        <p class="section-text">
+                            Yazılım geliştirme, veri tabanı yönetimi ve teknik destek alanlarında deneyimliyim.
+                            Müşteri odaklı çözümler sunarak firmaların dijital dönüşüm süreçlerine katkı sağlıyorum.
+                        </p>
+                    </div>
+
+                    <div class="slider" data-slider>
+                        <ul class="slider-container service-list" data-slider-container>
+                            <li class="slider-item" data-slider-item>
+                                <div class="service-card">
+                                    <div class="card-icon">
+                                        <ion-icon name="code-slash-outline"></ion-icon>
+                                    </div>
+                                    <h3 class="h3 card-title">C# Yazılım Geliştirme</h3>
+                                    <p class="card-text">
+                                        WinForms ve ASP.NET ortamında masaüstü ve web uygulamaları geliştiriyorum.
+                                        Performans ve kullanıcı deneyimini ön planda tutuyorum.
+                                    </p>
+                                    <span class="text-lg card-number">01</span>
+                                    <a href="#" class="layer-link" aria-label="C# yazılım geliştirme hakkında daha fazla bilgi"></a>
+                                </div>
+                            </li>
+                            <li class="slider-item" data-slider-item>
+                                <div class="service-card">
+                                    <div class="card-icon">
+                                        <ion-icon name="server-outline"></ion-icon>
+                                    </div>
+                                    <h3 class="h3 card-title">SQL Veri Tabanı Yönetimi</h3>
+                                    <p class="card-text">
+                                        Microsoft SQL Server üzerinde veritabanı tasarımı, sorgu optimizasyonu ve yedekleme çözümleri sunuyorum.
+                                    </p>
+                                    <span class="text-lg card-number">02</span>
+                                    <a href="#" class="layer-link" aria-label="SQL veri tabanı yönetimi hakkında daha fazla bilgi"></a>
+                                </div>
+                            </li>
+                            <li class="slider-item" data-slider-item>
+                                <div class="service-card">
+                                    <div class="card-icon">
+                                        <ion-icon name="construct-outline"></ion-icon>
+                                    </div>
+                                    <h3 class="h3 card-title">Proje Destek Hizmetleri</h3>
+                                    <p class="card-text">
+                                        Projelerin kurulum, test ve canlıya geçiş süreçlerinde teknik destek ve danışmanlık sağlıyorum.
+                                    </p>
+                                    <span class="text-lg card-number">03</span>
+                                    <a href="#" class="layer-link" aria-label="Proje destek hizmetleri hakkında daha fazla bilgi"></a>
+                                </div>
+                            </li>
+                            <li class="slider-item" data-slider-item>
+                                <div class="service-card">
+                                    <div class="card-icon">
+                                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                                    </div>
+                                    <h3 class="h3 card-title">Ağ ve Güvenlik Desteği</h3>
+                                    <p class="card-text">
+                                        Firewall (özellikle Berqnet), ağ yönetimi ve güvenlik yapılandırmaları konusunda IT destek sağlıyorum.
+                                    </p>
+                                    <span class="text-lg card-number">04</span>
+                                    <a href="#" class="layer-link" aria-label="Ağ ve güvenlik desteği hakkında daha fazla bilgi"></a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="slider-controls">
+                            <button class="slider-control prev" data-slider-prev aria-label="Önceki hizmete geç">
+                                <div class="line"></div>
+                                <div class="arrow"></div>
+                            </button>
+                            <button class="slider-control next" data-slider-next aria-label="Sonraki hizmete geç">
+                                <div class="line"></div>
+                                <div class="arrow"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section skills" aria-label="our skills" id="skills">
+                <div class="container">
+                    <p class="section-subtitle">Dijital Geleceği Yaratıyorum</p>
+                    <h2 class="h2 section-title">Yazılım Geliştiriyor ve Dijital Geleceği Yaratıyorum.</h2>
+                    <div class="skills-wrapper">
+                        <div>
+                            <p class="section-text">
+                                Yazılım geliştirme, veri tabanı yönetimi ve proje desteği konusunda uzmanım. C# ve .NET ile güçlü uygulamalar
+                                geliştiriyor, Microsoft SQL Server üzerinde veritabanı çözümleri sunuyorum.
+                            </p>
+                            <p class="section-text">
+                                Müşteri odaklı bir yaklaşımla, projeleri başarılı bir şekilde hayata geçirmekteyim. Her türlü yazılım ve teknik destek
+                                hizmeti sunarak dijital dönüşüm süreçlerine katkı sağlıyorum.
+                            </p>
+                            <a href="mailto:tuncaykog15@gmail.com" class="btn has-before">tuncaykog15@gmail.com</a>
+                        </div>
+
+                        <div>
+                            <ul class="skills-list">
+                                <li>
+                                    <div class="progress-wrapper">
+                                        <p class="progress-label">C# Yazılım Geliştirme</p>
+                                        <data class="progress-value" value="95">95%</data>
+                                    </div>
+                                    <div class="progress-bg">
+                                        <div class="progress" style="width: 95%;"></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="progress-wrapper">
+                                        <p class="progress-label">SQL Veri Tabanı Yönetimi</p>
+                                        <data class="progress-value" value="90">90%</data>
+                                    </div>
+                                    <div class="progress-bg">
+                                        <div class="progress" style="width: 90%;"></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="progress-wrapper">
+                                        <p class="progress-label">Proje Destek ve Danışmanlık</p>
+                                        <data class="progress-value" value="85">85%</data>
+                                    </div>
+                                    <div class="progress-bg">
+                                        <div class="progress" style="width: 85%;"></div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="progress-wrapper">
+                                        <p class="progress-label">IT Destek ve Güvenlik</p>
+                                        <data class="progress-value" value="80">80%</data>
+                                    </div>
+                                    <div class="progress-bg">
+                                        <div class="progress" style="width: 80%;"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+
+            <ul class="footer-list">
+
+                <li>
+                    <p class="h4 footer-list-title">İletişime Geç</p>
+                </li>
+
+                <li>
+                    <a href="mailto:tuncaykog15@gmail.com" class="footer-link">tuncaykog15@gmail.com</a>
+                </li>
+
+                <li>
+                    <a href="tel:+905533583851" class="footer-link">+90 553 358 38 51</a>
+                </li>
+
+            </ul>
+
+            <ul class="footer-list">
+
+                <li>
+                    <p class="h4 footer-list-title">Konum</p>
+                </li>
+
+                <li>
+                    <a href="#" class="footer-link">Maltepe — İstanbul, Türkiye</a>
+                </li>
+
+            </ul>
+
+            <ul class="social-list">
+
+                <li>
+                    <a href="https://www.instagram.com/tuncaykog/" class="social-link" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/tuncay-kög-81b47417b" class="social-link" target="_blank">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </footer>
+
+    <script src="~/assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
+
